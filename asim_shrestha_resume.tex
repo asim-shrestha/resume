@@ -1,0 +1,221 @@
+%-------------------------
+% Resume in Latex
+% Author : Asim Shrestha
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage[normalem]{ulem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome}
+\input{glyphtounicode}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=NavyBlue,
+  urlcolor=NavyBlue,
+}
+
+\let\oldhref\href
+\renewcommand{\href}[2]{\oldhref{#1}{\uline{#2}}}
+
+
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{%
+  \item \small #1%
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+  \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+  \textbf{#1} & #4 \\
+  \textit{\small#3} & \textit{\small #2} \\
+  \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+  \textbf{#1} & #4 \\
+  \textit{\small#3} & \textit{\small #2} \\
+  \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textit{\small#1} & \textit{\small #2} \\
+  \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{%
+  \resumeItem{#1}{#2}%
+}
+
+\renewcommand{\labelitemi}{\scriptsize$\bullet$}
+\renewcommand{\labelitemii}{\scriptsize$\bullet$}
+
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0,label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{%
+  \begin{itemize}[itemsep=0.15em, topsep=0.1em, parsep=0pt, partopsep=0pt]%
+}
+\newcommand{\resumeItemListEnd}{%
+  \end{itemize}%
+}
+
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+  \vspace*{-2.5em}  % Moves header upwards; tweak value to taste
+  \begin{center}
+  {\huge \textbf{Asim Shrestha}}\\[2pt]
+  \small
+  \faPhone\ (415) 815-7736 \textbar\ %
+  \faEnvelope\ \href{mailto:asim.shrestha@hotmail.com}{asim.shrestha@hotmail.com} \textbar\ %
+  \faLinkedinSquare\ \href{https://www.linkedin.com/in/a-shrestha/}{a-shrestha} \textbar\ %
+  \faGithub\ \href{https://github.com/asim-shrestha}{asim-shrestha}
+  \end{center}
+  \vspace{-0.15in}
+
+
+
+%--------TECHNICAL SKILLS------------
+  \section{Technical Skills}
+  \resumeSubHeadingListStart
+  \item{\small{
+    \textbf{Languages:} {Python, Typescript, Rust, Kotlin, HTML, CSS, SQL} \\
+    \textbf{Libraries \& frameworks:} {FastAPI, Next.js, React, OpenTelemetry, Protobuff, Terraform, Prisma, SQLAlchemy} \\
+    \textbf{Software \& tools:} {AWS, Docker, PostgreSQL, MySQL, Kafka, Redis, Clickhouse, Firecracker, Grafana, RabbitMQ, Git} \\
+    \textbf{Other skills:} {System Design, CI/CD, OOP, Functional Programming, DevOps, Algorithms, Testing, Architecture} \\
+  }}
+  \resumeSubHeadingListEnd
+
+
+
+%-----------EXPERIENCE-----------------
+  \section{Experience}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+  {{Reworkd} (\href{https://www.reworkd.ai/}{Website})}{San Francisco, CA}
+  {Co-founder \& CEO}{Apr. 2023 -- Current}
+  \resumeItemListStart
+  \resumeItem
+  {Raised \$4M from tier one investors like Y Combinator, Paul Graham, SV Angel, AI Grant, and more to build browser-based LLM agents.}
+  \resumeItem
+  {Launched one of the first available web agents in AgentGPT and scaled to 1M users, 35K stars on GitHub, and over \$1M in annual recurring revenue. (\href{https://github.com/reworkd/AgentGPT}{GitHub})}
+  \resumeItem
+  {Architected arbitrary code execution service via Firecracker microVMs and AWS bare metal instances to sandbox and execute LLM generated code with millisecond latency overhead.}
+  \resumeItem
+  {Managed headless browser infrastructure using MiTM proxy to allow for sub second anti-bot evasion while handling 1TB+ of network traffic every week.}
+  \resumeItem
+  {Developed novel OCR based page parsing algorithm to convert webpage screenshots into whitespace-structured text to enhance LLM context. Increased code generation benchmark success rate from 50\% to 98\%. (\href{https://github.com/reworkd/tarsier}{GitHub})}
+  \resumeItem
+  {Created an AST-based post-processing system to automatically correct LLM-generated code by dynamically optimizing invalid selectors, overwriting hallucinated methods, and injecting missing syntax.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+  {Amazon Web Services}{Vancouver, BC}
+  {Software Development Engineer}{Feb. 2022 -- Apr. 2023}
+  \resumeItemListStart
+  \resumeItem
+  {Helped lead intra-org decoupling initiatives on the RDS Platform team to load manage/scale internal services and tighten security posture for RDS disaster scenarios.}
+  \resumeItem
+  {Engineered zero downtime major version upgrades (PG14 to PG17) for the central databases powering RDS. Helped shed 10\% CPU utilization and up to 20ms in latency for performance bound queries across regions like us-east-1.}
+  \resumeItem
+  {Built ReCRUX in my spare time, a browser extension adding features like persisting file view state, comment/file links, and other QOL improvements to our existing code review platform. Used internally by over 5K engineers.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+  {BC Cancer Research Center}{Vancouver, BC}
+  {Full Stack Engineer Intern}{Jan. 2021 -- Apr. 2021}
+  \resumeItemListStart
+  \resumeItem
+  {Open sourced RT-Utils, a Python library used to facilitate the creation of 3D medical image files from machine learning segmentation masks. Used by 100s of researchers from MIT, Waterloo, UCLA and more. (\href{https://github.com/qurit/rt-utils}{GitHub}, \href{https://arxiv.org/pdf/2405.06184}{Paper})}
+  \resumeItem
+  {Designed a medical image file anonymization and distribution web application using Nuxt.js and Nest.js which includes a fully featured system for Administrators to control how files are anonymized, entirely within the client side.}
+  \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+  \section{Projects}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+  {{Webboy} ({\href{https://github.com/asim-shrestha/webboy}{GitHub}})}{}
+  {Gameboy emulator}{Sept. 2025 -- Nov. 2025}
+  \resumeItemListStart
+  \resumeItem
+  {Cycle accurate Gameboy emulator built in rust with full emulation of the CPU, MMU, PPU, MBC, and more.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+  {Bilby Compiler}{}
+  {Custom programming language}{Apr. 2021 -- Aug. 2021}
+  \resumeItemListStart
+  \resumeItem
+  {Custom programming language compiler built with Java, covering parsing, lexical analysis, semantic analysis, and intermediate code generation to support language features like arrays, conditionals, loops, and functions.}
+  \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+  \section{Education}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+  {Simon Fraser University}{Vancouver, BC}%
+  {Bachelor of Science in Computer Science}{Sep. 2017 -- Dec. 2021}
+  \resumeItemListStart
+  \resumeItem{\textbf{Awards:} Graduated first class with distinction; President's and Dean's Honour roll.}
+  \resumeItem{\textbf{CGPA:} 4.04/4.33 with academic performance in the top 5\% in the school of computer science.}
+  \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
